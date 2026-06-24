@@ -1,0 +1,14 @@
+# docker compose up --build
+# Put SUPABASE_* in a .env next to this file (compose loads it automatically), or export them.
+services:
+  app:
+    build: .
+    ports:
+      - "8001:8001"
+    environment:
+      # Backend (runtime). The SERVICE key is secret — never bake it into the image.
+      SUPABASE_URL: ${SUPABASE_URL:?set SUPABASE_URL}
+      SUPABASE_PUBLISHABLE_KEY: ${SUPABASE_PUBLISHABLE_KEY:?set SUPABASE_PUBLISHABLE_KEY}
+      SUPABASE_SERVICE_KEY: ${SUPABASE_SERVICE_KEY:?set SUPABASE_SERVICE_KEY}
+      PORT: 8001
+    restart: unless-stopped

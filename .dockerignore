@@ -1,0 +1,17 @@
+# Keep the build context small & secret-free. Note: **/.env does NOT match frontend/public.env
+# (that one is needed at build time for the Vite Supabase URL+key, which are public anyway).
+.git
+.gitignore
+.claude
+.vscode
+pwn-tools
+supabase
+**/node_modules
+**/.venv
+**/dist
+**/__pycache__
+**/*.pyc
+**/.env
+Dockerfile
+docker-compose.yml
+.dockerignore

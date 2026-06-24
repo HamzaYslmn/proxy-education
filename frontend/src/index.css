@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  color: #e4e4e7; /* zinc-200 */
+  background-color: #0a0a0c;
+  /* faint top-center glow — the Obsidian "lit from above" feel */
+  background-image: radial-gradient(55rem 32rem at 50% -8%, rgba(255, 255, 255, 0.045), transparent 60%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.1px;
+}
